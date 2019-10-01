@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Friend Finder</title>
+        <!-- Latest compiled and minified CSS & JS -->
+        <link rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <h1>Survey Questions</h1>
+            <hr>
+            <form class="survey-questions" novalidate>
+                <h3>About You</h3>
+                <div class="form-group">
+                    <label for="name"><h5>Name (Required)</h5></label>
+                    <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Name" required>
+                    <div class="invalid-feedback">
+                        Please enter your name.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name"><h5>Link to Photo Image (Required)</h5></label>
+                    <input type="text" class="form-control" id="photo" aria-describedby="photo" placeholder="Link to image" required>
+                    <div class="invalid-feedback">
+                        Please enter a link to your photo.
+                    </div>
+                </div>
+
+                
+                <h3>Question 1</h3>
+                <h5>Your mind is always buzzing with unexplored ideas and plans.</h5>
+
+                <div class="select-choice">
+                    <select class="mdb-select validate md-form" id="q1" required="required">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select an answer.
+                    </div>
+                </div>
+                <br>
+                
+                <h3>Question 2</h3>
+                <h5>Generally speaking, you rely more on your experience than your imagination.</h5>
+                
+                <div class="select-choice">
+                    <select class="mdb-select validate md-form" id="q2">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <br>
+
+                <h3>Question 3</h3>
+                <h5>You find it easy to stay relaxed and focused even when there is some pressure.</h5>
+                
+                <div class="select-choice">
+                    <select class="mdb-select validate md-form" id="q3">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <br>
+
+                <h3>Question 4</h3>
+                <h5>You rarely do something just out of sheer curiosity.</h5>
+                
+                <div class="select-choice">
+                    <select class="mdb-select validate md-form" id="q4">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <br>
+                
+                <h3>Question 5</h3>
+                <h5>People can rarely upset you.</h5>
+
+                <div class="select-choice">
+                    <select class="mdb-select validate md-form" id="q5">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <br>
+                
+                <h3>Question 6</h3>
+                <h5>It is often difficult for you to relate to other people’s feelings.</h5>
+                
+                <div class="select-choice">
+                        <select class="mdb-select validate md-form" id="q6">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <br>
+
+                <h3>Question 7</h3>
+                <h5>In a discussion, truth should be more important than people’s sensitivities.</h5>
+                
+                <div class="select-choice">
+                    <select class="mdb-select validate md-form" id="q7">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <br>
+
+                <h3>Question 8</h3>
+                <h5>You rarely get carried away by fantasies and ideas.</h5>
+                
+                <div class="select-choice">
+                    <select class="mdb-select validate md-form" id="q8">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <br>
+
+                <h3>Question 9</h3>
+                <h5>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h5>
+
+                <div class="select-choice">
+                    <select class="mdb-select validate md-form" id="q9">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <br>
+
+                <h3>Question 10</h3>
+                <h5>You feel more energetic after spending time with a group of people.</h5>
+                
+                <div class="select-choice">
+                    <select class="mdb-select validate md-form" id="q10">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <br>
+                
+            
+
+                <button type="submit" class="btn btn-primary btn-block" id="survey-submit">Submit</button>
+            </form>
+
+
+        </div>
+
+        <script>
+
+            // Function to validate the form before submitting
+            function validateForm() {
+                var isValid = true;
+                // This will go through the <select> options to make sure each one is answered.
+                $(".mdb-select").each(function() {
+                if ($(this).val() === null) {
+                    isValid = false;
+                }
+                });
+
+                // This will go through the two questions at the top of the page to see if they are answered.
+                $(".form-control").each(function() {
+                if ($(this).val() === "") {
+                    isValid = false;
+                }
+                });
+                return isValid;
+            } // End validateForm() function
+
+            // This will handle everything once the submit button is clicked
+            $("#survey-submit").on("click", function(event) {
+                event.preventDefault();
+
+                // Calling the validateForm() function to see if everything is answered
+                var formComplete = validateForm();
+                // console.log(formComplete);
+
+                if (!formComplete) { // If any answers are missing...
+                    alert("Please answer all of the questions.")
+                } else { // If all of the answers are present...
+                
+                    var newUser = {
+                        name: $("#name").val().trim(),
+                        photo: $("#photo").val(),
+                        answers: [
+                            parseInt($("#q1").val()),
+                            parseInt($("#q2").val()),
+                            parseInt($("#q3").val()),
+                            parseInt($("#q4").val()),
+                            parseInt($("#q5").val()),
+                            parseInt($("#q6").val()),
+                            parseInt($("#q7").val()),
+                            parseInt($("#q8").val()),
+                            parseInt($("#q9").val()),
+                            parseInt($("#q10").val())
+                        ]
+                    };
+
+
+                    // AJAX post to api/friends
+                    $.post("/api/friends", newUser)
+                        .then(function(data) {
+                        console.log("survey.html", data);
+                        alert("Adding to array...");
+                    });
+
+
+
+                    // console.log(newUser);
+
+
+                }
+
+            })
+        </script>
+    </body>
+
+</html>
