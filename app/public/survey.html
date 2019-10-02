@@ -190,11 +190,31 @@
                 </div>
                 <br>
                 
-            
 
                 <button type="submit" class="btn btn-primary btn-block" id="survey-submit">Submit</button>
+                <br>
             </form>
 
+            <!-- Modal to display match -->
+            <div class="modal" id="bestMatchModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="col-12 modal-title text-center">Here's to Friendship! Your Best Match:</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <h3 id="match-name"></h3>
+                            <h3 id="match-photo"></h3>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
 
@@ -252,13 +272,17 @@
                     // AJAX post to api/friends
                     $.post("/api/friends", newUser)
                         .then(function(data) {
-                        console.log("survey.html", data);
-                        alert("Adding to array...");
+                            console.log(data.bestMatchName);
+                            console.log(data.BestMatchPhoto)
+                            console.log("Adding to array...");
+
+                            $("#match-name").text(data.bestMatchName)
+                            $("#match-photo").html("<img src='" + data.bestMatchPhoto + "' alt='Best Match Photo'>")
+                            $("#bestMatchModal").modal();
+
+
+                        // console.log(bestMatchName);
                     });
-
-
-
-                    // console.log(newUser);
 
 
                 }
