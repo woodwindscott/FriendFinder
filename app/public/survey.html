@@ -16,6 +16,7 @@
 
     <body>
 
+        <!-- Survey Questions -->
         <div class="container">
             <h1>Survey Questions</h1>
             <hr>
@@ -205,6 +206,7 @@
                             <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
+                        <!-- The results will be targeted here when ready -->
                         <div class="modal-body text-center">
                             <h3 id="match-name"></h3>
                             <h3 id="match-photo"></h3>
@@ -225,16 +227,16 @@
                 var isValid = true;
                 // This will go through the <select> options to make sure each one is answered.
                 $(".mdb-select").each(function() {
-                if ($(this).val() === null) {
-                    isValid = false;
-                }
+                    if ($(this).val() === null) {
+                        isValid = false;
+                    }
                 });
 
                 // This will go through the two questions at the top of the page to see if they are answered.
                 $(".form-control").each(function() {
-                if ($(this).val() === "") {
-                    isValid = false;
-                }
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    }
                 });
                 return isValid;
             } // End validateForm() function
@@ -251,6 +253,7 @@
                     alert("Please answer all of the questions.")
                 } else { // If all of the answers are present...
                 
+                    // This will put all of the data retrieved from the form into an object
                     var newUser = {
                         name: $("#name").val().trim(),
                         photo: $("#photo").val(),
@@ -268,25 +271,20 @@
                         ]
                     };
 
-
                     // AJAX post to api/friends
                     $.post("/api/friends", newUser)
                         .then(function(data) {
-                            console.log(data.bestMatchName);
-                            console.log(data.BestMatchPhoto)
+
                             console.log("Adding to array...");
 
+                            // This will target the IDs in the modal to display the best match name and photo
+                            // This info comes from apiRoutes.js
                             $("#match-name").text(data.bestMatchName)
                             $("#match-photo").html("<img src='" + data.bestMatchPhoto + "' alt='Best Match Photo'>")
                             $("#bestMatchModal").modal();
 
-
-                        // console.log(bestMatchName);
                     });
-
-
                 }
-
             })
         </script>
     </body>

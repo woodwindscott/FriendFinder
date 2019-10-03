@@ -1,3 +1,4 @@
+// This is the "starter" friends list array that will be used to compare against new entries from the survey form.
 var friendsList = 
     [
         {
@@ -60,6 +61,7 @@ var friendsList =
         photo: 'https://static.boredpanda.com/blog/wp-content/uuuploads/strange-animals-you-didnt-know-2/strange-animals-you-didnt-know-2-2.jpg',
         answers: [2, 1, 2, 1, 5, 3, 5, 4, 5, 4]
         }
-    ];
+    ]; 
 
+// Exports friendsList to be used in api routes.
 module.exports = friendsList;
